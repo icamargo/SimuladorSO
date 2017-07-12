@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleGerenciaProcessos">
+    <children>
+        <HBox prefHeight="446.0" prefWidth="615.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+            <children>
+                <TableView fx:id="tblProcessos" prefHeight="304.0" prefWidth="452.0">
+                    <columns>
+                        <TableColumn fx:id="colCor" prefWidth="75.0" text="Cor" />
+                        <TableColumn fx:id="colPID" prefWidth="75.0" text="PID" />
+                        <TableColumn fx:id="colPrioridade" prefWidth="75.0" text="Prioridade" />
+                        <TableColumn fx:id="colEstado" prefWidth="75.0" text="Estado" />
+                        <TableColumn fx:id="colTempoCPU" prefWidth="75.0" text="Tempo CPU" />
+                        <TableColumn fx:id="colFrames" prefWidth="75.0" text="Frames" />
+                    </columns>
+                </TableView>
+                <VBox prefHeight="446.0" prefWidth="123.0" spacing="20.0">
+                    <children>
+                        <Button fx:id="btnCriar" onAction="#chamaTelaCriacaoProcesso" prefHeight="25.0" prefWidth="135.0" text="Criar" />
+                        <Button fx:id="btnSuspender" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Suspender" />
+                        <Button fx:id="btnProsseguir" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Prosseguir" />
+                        <Button fx:id="btnFinalizar" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Finalizar" />
+                        <Button fx:id="btnPrioridade" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" text="Prioridade" />
+                        <Button fx:id="btnPCB" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="PCB" />
+                    </children>
+                    <HBox.margin>
+                        <Insets top="50.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
