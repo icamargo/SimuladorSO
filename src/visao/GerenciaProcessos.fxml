@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleGerenciaProcessos">
     <children>
-        <HBox prefHeight="446.0" prefWidth="615.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+        <HBox alignment="CENTER" prefHeight="446.0" prefWidth="615.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
             <children>
                 <TableView fx:id="tblProcessos" prefHeight="304.0" prefWidth="452.0">
                     <columns>
@@ -22,7 +22,7 @@
                         <TableColumn fx:id="colFrames" prefWidth="75.0" text="Frames" />
                     </columns>
                 </TableView>
-                <VBox prefHeight="446.0" prefWidth="123.0" spacing="20.0">
+                <VBox alignment="CENTER" prefHeight="446.0" prefWidth="123.0" spacing="20.0">
                     <children>
                         <Button fx:id="btnCriar" onAction="#chamaTelaCriacaoProcesso" prefHeight="25.0" prefWidth="135.0" text="Criar" />
                         <Button fx:id="btnSuspender" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Suspender" />
@@ -32,7 +32,7 @@
                         <Button fx:id="btnPCB" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="PCB" />
                     </children>
                     <HBox.margin>
-                        <Insets top="50.0" />
+                        <Insets />
                     </HBox.margin>
                 </VBox>
             </children>

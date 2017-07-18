@@ -9,6 +9,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 /**
  *
@@ -20,9 +22,6 @@ public class ControleGerenciaProcessos implements Initializable {
     private Label label;
     
     @FXML
-    private StackPane stack;
-    
-    @FXML
     private void handleButtonAction(ActionEvent event) {
     }
     
@@ -32,9 +31,16 @@ public class ControleGerenciaProcessos implements Initializable {
     }
     
     @FXML
-    public void chamaTelaCriacaoProcesso(){
-        stack.getChildren().clear();
-        stack.getChildren().add(getNode("CriacaoProcesso.fxml"));
+    void chamaTelaCriacaoProcesso(){
+        Stage stage2 = new Stage();
+        StackPane stack = new StackPane();
+        //stack.getChildren().add(getNode("/visao/CriacaoProcesso.fxml"));
+        stack.getChildren().add(getNode("/visao/GerenciaMemoria.fxml"));
+        
+        //Scene criacaoProcesso = new Scene(stack, 500, 250); // CriacaoProcesso
+        Scene criacaoProcesso = new Scene(stack, 575, 575); // GerenciaMemoria
+        stage2.setScene(criacaoProcesso);
+        stage2.show();
     }
     
     public Node getNode(String node){
