@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  *
  * @author IgorCamargo
  */
-public class ControleGerenciaProcessos implements Initializable {
+public class ControleProcessos implements Initializable {
     
     @FXML
     private Label label;

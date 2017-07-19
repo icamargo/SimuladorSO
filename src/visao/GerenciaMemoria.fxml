@@ -2,18 +2,21 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 
-<AnchorPane id="AnchorPane" prefHeight="379.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleGerenciaMemoria">
+<AnchorPane id="AnchorPane" prefHeight="458.0" prefWidth="572.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleMemoria">
     <children>
-        <HBox alignment="CENTER" prefHeight="379.0" prefWidth="571.0">
-            <children>
-                <GridPane alignment="CENTER" gridLinesVisible="true" prefHeight="380.0" prefWidth="771.0">
+      <VBox prefHeight="482.0" prefWidth="572.0">
+         <children>
+                <GridPane alignment="CENTER" gridLinesVisible="true" prefHeight="401.0" prefWidth="572.0">
                     <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="70.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="10.0" prefWidth="70.0" />
@@ -1029,7 +1032,7 @@
                                 <Circle fx:id="circulo98" fill="DODGERBLUE" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
                             </children>
                         </HBox>
-                        <HBox fx:id="hBox99" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="9" GridPane.rowIndex="9">
+                        <HBox fx:id="hBox99" alignment="CENTER" prefHeight="59.0" prefWidth="84.0" spacing="5.0" GridPane.columnIndex="9" GridPane.rowIndex="9">
                             <children>
                                 <Label text="99">
                                     <padding>
@@ -1041,7 +1044,21 @@
                         </HBox>
                     </children>
                 </GridPane>
-            </children>
-        </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="570.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="80.0" text="Tamanho LPL" />
+                  <ProgressBar fx:id="progBarLPL" prefWidth="200.0" progress="0.0" />
+                  <TextField fx:id="txtFieldLPL" prefHeight="25.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="40.0" prefWidth="570.0" spacing="15.0">
+               <children>
+                  <Label prefHeight="15.0" prefWidth="80.0" text="Tamanho LPM" />
+                  <ProgressBar fx:id="progBarLPM" prefWidth="200.0" progress="0.0" />
+                  <TextField fx:id="txtFieldLPM" prefHeight="25.0" prefWidth="40.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
     </children>
 </AnchorPane>

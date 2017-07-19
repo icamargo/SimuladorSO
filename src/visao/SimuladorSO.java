@@ -20,17 +20,18 @@ public class SimuladorSO extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        /*Parent root = FXMLLoader.load(getClass().getResource("GerenciaProcessos.fxml"));
+        Parent telaGerenciaProcessos=  FXMLLoader.load(getClass().getResource("GerenciaProcessos.fxml"));
         
-        Scene scene = new Scene(root);
+        Scene tela1 = new Scene(telaGerenciaProcessos);
         
-        stage.setScene(scene);
-        stage.show();*/
-        URL fxml = getClass().getResource("GerenciaProcessos.fxml");
+        stage.setScene(tela1);
+        stage.show();
+        
+        /*URL fxml = getClass().getResource("GerenciaProcessos.fxml");
 		Parent parent = FXMLLoader.load(fxml);
 		stage.setTitle("Gerência de Processos");
 		stage.setScene(new Scene(parent));
-		stage.show();
+		stage.show();*/
     }
 
     /**

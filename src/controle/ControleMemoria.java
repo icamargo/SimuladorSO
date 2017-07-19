@@ -9,7 +9,7 @@ import javafx.fxml.Initializable;
  *
  * @author IgorCamargo
  */
-public class ControleGerenciaMemoria implements Initializable {
+public class ControleMemoria implements Initializable {
 
     /**
      * Initializes the controller class.
