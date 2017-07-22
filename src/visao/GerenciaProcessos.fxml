@@ -8,21 +8,21 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="456.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleProcessos">
+<AnchorPane id="AnchorPane" prefHeight="229.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleProcessos">
     <children>
-        <HBox alignment="CENTER" prefHeight="446.0" prefWidth="615.0" spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
+        <HBox alignment="CENTER" prefHeight="340.0" prefWidth="570.0" spacing="20.0" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0">
             <children>
-                <TableView fx:id="tblProcessos" prefHeight="304.0" prefWidth="452.0">
+                <TableView fx:id="tblProcessos" prefHeight="268.0" prefWidth="467.0">
                     <columns>
-                        <TableColumn fx:id="colCor" prefWidth="75.0" text="Cor" />
-                        <TableColumn fx:id="colPID" prefWidth="75.0" text="PID" />
-                        <TableColumn fx:id="colPrioridade" prefWidth="75.0" text="Prioridade" />
-                        <TableColumn fx:id="colEstado" prefWidth="75.0" text="Estado" />
-                        <TableColumn fx:id="colTempoCPU" prefWidth="75.0" text="Tempo CPU" />
-                        <TableColumn fx:id="colFrames" prefWidth="75.0" text="Frames" />
+                        <TableColumn fx:id="colCor" prefWidth="63.0" text="Cor" />
+                        <TableColumn fx:id="colPID" prefWidth="68.0" text="PID" />
+                        <TableColumn fx:id="colPrioridade" prefWidth="78.0" text="Prioridade" />
+                        <TableColumn fx:id="colEstado" prefWidth="112.0" text="Estado" />
+                        <TableColumn fx:id="colTempoCPU" prefWidth="74.0" text="Tempo CPU" />
+                        <TableColumn fx:id="colFrames" prefWidth="51.0" text="Frames" />
                     </columns>
                 </TableView>
-                <VBox alignment="CENTER" prefHeight="446.0" prefWidth="123.0" spacing="20.0">
+                <VBox alignment="CENTER" prefHeight="446.0" prefWidth="123.0" spacing="10.0">
                     <children>
                         <Button fx:id="btnCriar" onAction="#chamaTelaCriacaoProcesso" prefHeight="25.0" prefWidth="135.0" text="Criar" />
                         <Button fx:id="btnSuspender" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Suspender" />

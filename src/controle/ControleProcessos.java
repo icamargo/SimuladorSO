@@ -32,15 +32,12 @@ public class ControleProcessos implements Initializable {
     
     @FXML
     void chamaTelaCriacaoProcesso(){
-        Stage stage2 = new Stage();
-        StackPane stack = new StackPane();
-        //stack.getChildren().add(getNode("/visao/CriacaoProcesso.fxml"));
-        stack.getChildren().add(getNode("/visao/GerenciaMemoria.fxml"));
-        
-        //Scene criacaoProcesso = new Scene(stack, 500, 250); // CriacaoProcesso
-        Scene criacaoProcesso = new Scene(stack, 575, 575); // GerenciaMemoria
-        stage2.setScene(criacaoProcesso);
-        stage2.show();
+        Stage stageCriacaoProcesso = new Stage();
+        StackPane stackCriacaoProcesso = new StackPane();
+        stackCriacaoProcesso.getChildren().add(getNode("/visao/CriacaoProcesso.fxml"));
+        Scene sceneCriacaoProcesso = new Scene(stackCriacaoProcesso, 500, 250);
+        stageCriacaoProcesso.setScene(sceneCriacaoProcesso);
+        stageCriacaoProcesso.show();
     }
     
     public Node getNode(String node){

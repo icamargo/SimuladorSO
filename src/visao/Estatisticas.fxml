@@ -47,7 +47,7 @@
         <TextField alignment="CENTER" layoutX="178.0" layoutY="254.0" prefHeight="31.0" prefWidth="39.0" text="00" />
         <TextField alignment="CENTER" layoutX="178.0" layoutY="290.0" prefHeight="31.0" prefWidth="39.0" text="00" />
         <TextField alignment="CENTER" layoutX="178.0" layoutY="329.0" prefHeight="31.0" prefWidth="39.0" text="00" />
-        <TextField alignment="CENTER" layoutX="161.0" layoutY="63.0" prefHeight="31.0" prefWidth="73.0" text="00:00:00" />
+        <TextField fx:id="txtFieldHorarioInicio" alignment="CENTER" layoutX="161.0" layoutY="63.0" prefHeight="31.0" prefWidth="73.0" text="00:00:00" />
         <TextField alignment="CENTER" layoutX="419.0" layoutY="366.0" prefHeight="31.0" prefWidth="39.0" text="0" />
         <TextField alignment="CENTER" layoutX="419.0" layoutY="329.0" prefHeight="31.0" prefWidth="39.0" text="0" />
         <TextField alignment="CENTER" layoutX="419.0" layoutY="290.0" prefHeight="31.0" prefWidth="39.0" text="0" />

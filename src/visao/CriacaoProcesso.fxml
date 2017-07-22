@@ -10,117 +10,49 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="236.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleProcessos">
+<AnchorPane id="AnchorPane" prefHeight="226.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleProcessos">
     <children>
-        <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+        <VBox alignment="CENTER" layoutX="2.0" prefHeight="226.0" prefWidth="330.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
             <children>
-                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0">
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="325.0" spacing="10.0">
                     <children>
-                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
-                            <children>
-                                <Label fx:id="lblPrioridade" text="Prioridade" />
-                            </children>
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                            <HBox.margin>
-                                <Insets right="15.0" />
-                            </HBox.margin>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="150.0">
-                            <children>
-                                <ChoiceBox fx:id="chBoxPrioridade" prefWidth="150.0" />
-                            </children>
-                        </VBox>
-                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="150.0">
-                            <children>
-                                <Label fx:id="lblFrames" text="Limite de Frames" />
-                            </children>
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                            <HBox.margin>
-                                <Insets right="15.0" />
-                            </HBox.margin>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="150.0">
-                            <children>
-                                <ChoiceBox fx:id="chBoxFrames" prefWidth="150.0" />
-                            </children>
-                        </VBox>
+                          <Label fx:id="lblPrioridade" text="Prioridade" />
+                          <ChoiceBox fx:id="chBoxPrioridade" prefHeight="25.0" prefWidth="70.0" />
+                          <Label fx:id="lblFrames" text="Limite de Frames" />
+                          <ChoiceBox fx:id="chBoxFrames" prefHeight="25.0" prefWidth="70.0" />
                     </children>
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
                 </HBox>
-                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0">
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="325.0" spacing="10.0">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
                     <children>
-                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="300.0">
-                            <children>
-                                <Label fx:id="lblTipoProcesso" text="Tipo de Processo" />
-                            </children>
-                            <HBox.margin>
-                                <Insets right="15.0" />
-                            </HBox.margin>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="300.0">
-                            <children>
-                                <ChoiceBox fx:id="chBoxTipoProcesso" prefWidth="150.0" />
-                            </children>
-                        </VBox>
+                          <Label fx:id="lblTipoProcesso" text="Tipo de Processo" />
+                          <ChoiceBox fx:id="chBoxTipoProcesso" prefWidth="150.0" />
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0">
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="325.0" spacing="10.0">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
                     <children>
-                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="300.0">
-                            <children>
-                                <Label fx:id="lblCorProcesso" text="Cor do Processo" />
-                            </children>
-                            <HBox.margin>
-                                <Insets right="15.0" />
-                            </HBox.margin>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="300.0">
-                            <children>
-                                <ColorPicker fx:id="clrPickerCorProcesso" />
-                            </children>
-                        </VBox>
+                          <Label fx:id="lblCorProcesso" text="Cor do Processo" />
+                          <ColorPicker fx:id="clrPickerCorProcesso" prefHeight="25.0" prefWidth="140.0" />
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0">
+                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="325.0" spacing="10.0">
                     <opaqueInsets>
                         <Insets />
                     </opaqueInsets>
                     <children>
-                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="300.0">
-                            <children>
-                                <Label fx:id="lblNroProcessos" text="Número de Processos" />
-                            </children>
-                            <HBox.margin>
-                                <Insets right="15.0" />
-                            </HBox.margin>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="300.0">
-                            <children>
-                                <TextField fx:id="txtFieldNroProcessos" prefHeight="25.0" prefWidth="191.0">
-                                    <VBox.margin>
-                                        <Insets right="150.0" />
-                                    </VBox.margin>
-                                </TextField>
-                            </children>
-                            <HBox.margin>
-                                <Insets />
-                            </HBox.margin>
-                        </VBox>
+                          <Label fx:id="lblNroProcessos" text="Número de Processos" />
+                          <TextField fx:id="txtFieldNroProcessos" prefHeight="25.0" prefWidth="74.0" />
                     </children>
                 </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="325.0" spacing="10.0">
                <children>
                         <Button fx:id="btnCriar" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="Criar" />
                </children>
