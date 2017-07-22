@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -11,19 +16,58 @@
  * @author tatianefpg
  -->
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111">
+<AnchorPane id="AnchorPane" fx:id="AnchorPaneParametrosDoSistema" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField alignment="CENTER" blendMode="COLOR_BURN" layoutY="-1.0" prefHeight="56.0" prefWidth="600.0" text="Parâmetros do Sistema">
+      <Label fx:id="LabelParametrosDopSistema" alignment="CENTER" disable="true" layoutY="2.0" prefHeight="45.0" prefWidth="601.0" text="Parâmetros do Sistema" textAlignment="CENTER">
          <font>
             <Font name="Arial Black" size="20.0" />
          </font>
-      </TextField>
-      <ToolBar layoutY="47.0" prefHeight="40.0" prefWidth="601.0">
-        <items>
-          <Button alignment="CENTER" mnemonicParsing="false" text="Geral" textAlignment="CENTER" />
-            <Button mnemonicParsing="false" text="Processador" textAlignment="CENTER" />
-            <Button mnemonicParsing="false" text="Memória" textAlignment="CENTER" />
-        </items>
-      </ToolBar>
+      </Label>
+      <TabPane fx:id="TabPlaneParametrosDoSistema" layoutY="51.0" prefHeight="350.0" prefWidth="601.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="TabGeral" text="Geral">
+            <content>
+              <AnchorPane fx:id="AnchorPaneParametrosDoSistemaGeral" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+          <Tab fx:id="TabProcessador" text="Processador">
+            <content>
+              <AnchorPane fx:id="AnchorPaneParametrosDoSistemaProcessador" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="LabelPoliticasDeEscalonamento" layoutX="34.0" layoutY="30.0" text="Políticas de Escalonamento">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <RadioButton fx:id="RadioButtonRoundRobimSimples" layoutX="34.0" layoutY="77.0" mnemonicParsing="false" text="Round-robim Simples" />
+                        <RadioButton fx:id="RadioButtonRoundRobimComPrioridades" layoutX="34.0" layoutY="117.0" mnemonicParsing="false" text="Round-robim com Prioridade" />
+                        <RadioButton fx:id="RadioButtonComPrioridades" layoutX="34.0" layoutY="157.0" mnemonicParsing="false" text="Com Prioridade" />
+                        <RadioButton fx:id="RadioButtonComPrioridadesDinamicas" layoutX="34.0" layoutY="197.0" mnemonicParsing="false" text="Com Prioridade Dinâmicas" />
+                        <RadioButton fx:id="RadioButtonEscalonamentoDaLoteria" layoutX="34.0" layoutY="234.0" mnemonicParsing="false" text="Escalonamento da loteria" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="TabMemoria" text="Memória">
+              <content>
+                <AnchorPane fx:id="AnchorPaneParametrosDoSistemaMemoria" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <MenuButton fx:id="MenuButtonPoliticaDeBuscaDePaginas" layoutX="368.0" layoutY="27.0" mnemonicParsing="false" text="Antecipada">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </MenuButton>
+                        <Label fx:id="LabelPoliticaDeBuscaDePaginas" layoutX="27.0" layoutY="32.0" text="Política de busca de páginas" />
+                        <Label fx:id="LabelImplementarLimiteDeFramesPorProcesso" layoutX="27.0" layoutY="91.0" text="Implementar limite de frames por processo" />
+                        <Label fx:id="LabelNumMinimoDePaginasLivresNaMemoria" layoutX="27.0" layoutY="145.0" text="Núm. mínimo de páginas livres na memória (%)" />
+                        <CheckBox fx:id="CheckBoxImplementarLimiteDeFramesPorProcesso" layoutX="368.0" layoutY="91.0" mnemonicParsing="false" />
+                        <TextField fx:id="TextFieldNumMinimoDePaginasLivresNaMemoria" alignment="CENTER" editable="false" layoutX="368.0" layoutY="140.0" prefHeight="31.0" prefWidth="37.0" text="80" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
    </children>
 </AnchorPane>

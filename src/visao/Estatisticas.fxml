@@ -5,61 +5,124 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
+ 
 <!--
 *
 * @author tatianefpg
 -->
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleEstatisticas">
+<AnchorPane id="AnchorPane" fx:id="AnchorPaneEstatisticas" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleEstatisticas">
     <children>
-        <Label layoutX="14.0" layoutY="68.0" prefWidth="136.0" text="Horário de início" />
-        <Label layoutX="14.0" layoutY="108.0" prefHeight="23.0" prefWidth="198.0" text="Número de Processos" />
-        <Label layoutX="14.0" layoutY="187.0" prefHeight="23.0" prefWidth="173.0" text="Tempo Total UCP (s)" />
-        <Label layoutX="14.0" layoutY="223.0" prefHeight="23.0" prefWidth="210.0" text="Estado Pronto Espera" />
-        <Label layoutX="14.0" layoutY="258.0" prefHeight="23.0" prefWidth="210.0" text="Mémória (bytes)" />
-        <Label layoutX="14.0" layoutY="294.0" prefHeight="23.0" prefWidth="210.0" text="Total Page Fault" />
-        <Label layoutX="14.0" layoutY="333.0" prefHeight="23.0" prefWidth="164.0" text="Tempo Decorrido" />
-        <Label layoutX="255.0" layoutY="67.0" prefHeight="23.0" prefWidth="88.0" text="Prontos" />
-        <Label layoutX="377.0" layoutY="67.0" prefHeight="23.0" prefWidth="88.0" text="Exec." />
-        <Label layoutX="479.0" layoutY="67.0" prefHeight="23.0" prefWidth="88.0" text="Espera" />
-        <Label layoutX="256.0" layoutY="108.0" prefHeight="23.0" prefWidth="164.0" text="Throughput (Proc/s)" />
-        <Label layoutX="256.0" layoutY="148.0" prefHeight="23.0" prefWidth="164.0" text="Turnaround" />
-        <Label layoutX="14.0" layoutY="370.0" prefHeight="23.0" prefWidth="164.0" text="Utilização UCP (%)" />
-        <Label layoutX="256.0" layoutY="187.0" prefHeight="23.0" prefWidth="164.0" text="Espera Média (s)" />
-        <Label layoutX="255.0" layoutY="223.0" prefHeight="23.0" prefWidth="198.0" text="Espera Acumulada (s)" />
-        <Label layoutX="256.0" layoutY="258.0" prefHeight="23.0" prefWidth="164.0" text="Memória em uso" />
-        <Label layoutX="482.0" layoutY="258.0" prefHeight="23.0" prefWidth="60.0" text="Livre" />
-        <Label layoutX="256.0" layoutY="295.0" prefHeight="21.0" prefWidth="114.0" text="Page Faults/seg" />
-        <Label layoutX="256.0" layoutY="333.0" prefHeight="23.0" prefWidth="108.0" text="Hw page fault" />
-        <Label layoutX="255.0" layoutY="370.0" prefHeight="23.0" prefWidth="98.0" text="Sw page fault" />
-        <TextField alignment="CENTER" blendMode="COLOR_BURN" layoutX="1.0" layoutY="1.0" prefHeight="56.0" prefWidth="600.0" text="Estatísticas">
-            <font>
-                <Font name="Arial Black" size="20.0" />
-            </font>
-        </TextField>
-        <Separator layoutX="-1.0" layoutY="53.0" prefHeight="0.0" prefWidth="600.0" />
-        <Label layoutX="14.0" layoutY="148.0" prefHeight="23.0" prefWidth="198.0" text="Processos Escalonados" />
-        <TextField alignment="CENTER" layoutX="178.0" layoutY="104.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="178.0" layoutY="144.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="178.0" layoutY="183.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="178.0" layoutY="219.0" prefHeight="31.0" prefWidth="39.0" text="0,00" />
-        <TextField alignment="CENTER" layoutX="178.0" layoutY="254.0" prefHeight="31.0" prefWidth="39.0" text="00" />
-        <TextField alignment="CENTER" layoutX="178.0" layoutY="290.0" prefHeight="31.0" prefWidth="39.0" text="00" />
-        <TextField alignment="CENTER" layoutX="178.0" layoutY="329.0" prefHeight="31.0" prefWidth="39.0" text="00" />
-        <TextField fx:id="txtFieldHorarioInicio" alignment="CENTER" layoutX="161.0" layoutY="63.0" prefHeight="31.0" prefWidth="73.0" text="00:00:00" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="366.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="329.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="290.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="523.0" layoutY="254.0" prefHeight="31.0" prefWidth="60.0" text="100%" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="254.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="219.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="183.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="144.0" prefHeight="31.0" prefWidth="48.0" text="0,00" />
-        <TextField alignment="CENTER" layoutX="174.0" layoutY="366.0" prefHeight="31.0" prefWidth="48.0" text="0,00" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="104.0" prefHeight="31.0" prefWidth="48.0" text="0,00" />
-        <TextField alignment="CENTER" layoutX="319.0" layoutY="63.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="419.0" layoutY="63.0" prefHeight="31.0" prefWidth="39.0" text="0" />
-        <TextField alignment="CENTER" layoutX="532.0" layoutY="63.0" prefHeight="31.0" prefWidth="39.0" text="0" />
+        <Label fx:id="abelHorarioDeInicio" layoutX="14.0" layoutY="68.0" prefWidth="136.0" text="Horário de início" />
+        <Label fx:id="LabelNumeroDeProcessos" layoutX="14.0" layoutY="108.0" prefHeight="23.0" prefWidth="198.0" text="Número de Processos" />
+        <Label fx:id="LabelTempoTotalUCP" layoutX="14.0" layoutY="187.0" prefHeight="23.0" prefWidth="173.0" text="Tempo Total UCP (s)" />
+        <Label fx:id="LabelEstadoProntoEspera" layoutX="14.0" layoutY="223.0" prefHeight="23.0" prefWidth="210.0" text="Estado Pronto Espera" />
+        <Label fx:id="LabelMemoriaBytes" layoutX="14.0" layoutY="258.0" prefHeight="23.0" prefWidth="210.0" text="Mémória (bytes)" />
+        <Label fx:id="LabelTotalPageFault" layoutX="14.0" layoutY="294.0" prefHeight="23.0" prefWidth="210.0" text="Total Page Fault" />
+        <Label fx:id="LabelTempoDecorrido" layoutX="14.0" layoutY="333.0" prefHeight="23.0" prefWidth="164.0" text="Tempo Decorrido" />
+        <Label fx:id="LabelProntos" layoutX="255.0" layoutY="67.0" prefHeight="23.0" prefWidth="88.0" text="Prontos" />
+        <Label fx:id="LabelExecucao" layoutX="377.0" layoutY="67.0" prefHeight="23.0" prefWidth="88.0" text="Exec." />
+        <Label fx:id="LabelEspera" layoutX="479.0" layoutY="67.0" prefHeight="23.0" prefWidth="88.0" text="Espera" />
+        <Label fx:id="LabelThroughput" layoutX="256.0" layoutY="108.0" prefHeight="23.0" prefWidth="164.0" text="Throughput (Proc/s)" />
+        <Label fx:id="LabelTurnaround" layoutX="256.0" layoutY="148.0" prefHeight="23.0" prefWidth="164.0" text="Turnaround" />
+        <Label fx:id="LabelUtilizacaoUCP" layoutX="14.0" layoutY="370.0" prefHeight="23.0" prefWidth="164.0" text="Utilização UCP (%)" />
+        <Label fx:id="LabelEsperaMedia" layoutX="256.0" layoutY="187.0" prefHeight="23.0" prefWidth="164.0" text="Espera Média (s)" />
+        <Label fx:id="LabelEsperaAcumulada" layoutX="255.0" layoutY="223.0" prefHeight="23.0" prefWidth="198.0" text="Espera Acumulada (s)" />
+        <Label fx:id="LabelMemoriaEmUso" layoutX="256.0" layoutY="258.0" prefHeight="23.0" prefWidth="164.0" text="Memória em uso" />
+        <Label fx:id="LabelLivre" layoutX="482.0" layoutY="258.0" prefHeight="23.0" prefWidth="60.0" text="Livre" />
+        <Label fx:id="LabelPageFaults" layoutX="256.0" layoutY="295.0" prefHeight="21.0" prefWidth="114.0" text="Page Faults/seg" />
+        <Label fx:id="LabelHwPageFault" layoutX="256.0" layoutY="333.0" prefHeight="23.0" prefWidth="108.0" text="Hw page fault" />
+        <Label fx:id="LabelSwPageFault" layoutX="255.0" layoutY="370.0" prefHeight="23.0" prefWidth="98.0" text="Sw page fault" />
+        <Separator fx:id="SeparatorEstatisticas" layoutX="-1.0" layoutY="53.0" prefHeight="0.0" prefWidth="600.0" />
+        <Label fx:id="LabelProcessosEscalonados" layoutX="14.0" layoutY="148.0" prefHeight="23.0" prefWidth="198.0" text="Processos Escalonados" />
+        <TextField fx:id="TextFieldNumeroDeProcessos" alignment="CENTER" disable="true" layoutX="178.0" layoutY="104.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldProcessosEscalonados" alignment="CENTER" disable="true" layoutX="178.0" layoutY="144.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldTempoTotalUCP" alignment="CENTER" disable="true" layoutX="178.0" layoutY="183.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldEstadoProntoEspera" alignment="CENTER" disable="true" layoutX="178.0" layoutY="219.0" prefHeight="31.0" prefWidth="39.0" text="0,00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldMemoriaBytes" alignment="CENTER" disable="true" layoutX="178.0" layoutY="254.0" prefHeight="31.0" prefWidth="39.0" text="00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldTotalPageFault" alignment="CENTER" disable="true" layoutX="178.0" layoutY="290.0" prefHeight="31.0" prefWidth="39.0" text="00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldTempoDecorrido" alignment="CENTER" disable="true" layoutX="178.0" layoutY="329.0" prefHeight="31.0" prefWidth="39.0" text="00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldHorarioDeInicio" alignment="CENTER" disable="true" layoutX="161.0" layoutY="63.0" prefHeight="31.0" prefWidth="73.0" text="00:00:00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldSwPageFault" alignment="CENTER" disable="true" layoutX="419.0" layoutY="366.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldHwPageFault" alignment="CENTER" disable="true" layoutX="419.0" layoutY="329.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldPageFaults" alignment="CENTER" disable="true" layoutX="419.0" layoutY="290.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldLivre" alignment="CENTER" disable="true" layoutX="523.0" layoutY="254.0" prefHeight="31.0" prefWidth="60.0" text="100%">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldMemoriaEmUso" alignment="CENTER" disable="true" layoutX="419.0" layoutY="254.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldEsperaAcumulada" alignment="CENTER" disable="true" layoutX="419.0" layoutY="219.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldEsperaMedia" alignment="CENTER" disable="true" layoutX="419.0" layoutY="183.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldTurnaround" alignment="CENTER" disable="true" layoutX="419.0" layoutY="144.0" prefHeight="31.0" prefWidth="48.0" text="0,00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldUtilizacaoUCP" alignment="CENTER" disable="true" layoutX="174.0" layoutY="366.0" prefHeight="31.0" prefWidth="48.0" text="0,00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldThroughput" alignment="CENTER" disable="true" layoutX="419.0" layoutY="104.0" prefHeight="31.0" prefWidth="48.0" text="0,00">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldProntos" alignment="CENTER" disable="true" layoutX="319.0" layoutY="63.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldExecutando" alignment="CENTER" disable="true" layoutX="419.0" layoutY="63.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+        <TextField fx:id="TextFieldEspera" alignment="CENTER" disable="true" layoutX="532.0" layoutY="63.0" prefHeight="31.0" prefWidth="39.0" text="0">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></TextField>
+      <Label fx:id="LabelEstatisticas" alignment="CENTER" disable="true" layoutX="1.0" layoutY="-1.0" prefHeight="54.0" prefWidth="601.0" text="Estatísticas" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
