@@ -24,7 +24,7 @@
         <Label fx:id="LabelExecucao" layoutX="377.0" layoutY="67.0" prefHeight="23.0" prefWidth="88.0" text="Exec." />
         <Label fx:id="LabelEspera" layoutX="479.0" layoutY="67.0" prefHeight="23.0" prefWidth="88.0" text="Espera" />
         <Label fx:id="LabelThroughput" layoutX="256.0" layoutY="108.0" prefHeight="23.0" prefWidth="164.0" text="Throughput (Proc/s)" />
-        <Label fx:id="LabelThroughput" layoutX="256.0" layoutY="148.0" prefHeight="23.0" prefWidth="164.0" text="Turnaround" />
+        <Label fx:id="LabelTurnaround" layoutX="256.0" layoutY="148.0" prefHeight="23.0" prefWidth="164.0" text="Turnaround" />
         <Label fx:id="LabelUtilizacaoUCP" layoutX="14.0" layoutY="370.0" prefHeight="23.0" prefWidth="164.0" text="Utilização UCP (%)" />
         <Label fx:id="LabelEsperaMedia" layoutX="256.0" layoutY="187.0" prefHeight="23.0" prefWidth="164.0" text="Espera Média (s)" />
         <Label fx:id="LabelEsperaAcumulada" layoutX="255.0" layoutY="223.0" prefHeight="23.0" prefWidth="198.0" text="Espera Acumulada (s)" />
