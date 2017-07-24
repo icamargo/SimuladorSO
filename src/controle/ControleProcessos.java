@@ -24,8 +24,7 @@ import modelo.Processo;
 public class ControleProcessos implements Initializable {
     
     //ArrayList de processos
-    List<Processo> processos = new ArrayList<Processo>();
-    List <int> listaPrioridades = new List<int>();             
+    List<Processo> processos = new ArrayList<Processo>();           
     
     
     @FXML
