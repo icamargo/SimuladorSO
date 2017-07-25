@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
@@ -8,6 +9,7 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -32,18 +34,26 @@
           </Tab>
           <Tab fx:id="TabProcessador" text="Processador">
             <content>
-              <AnchorPane fx:id="AnchorPaneParametrosDoSistemaProcessador" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+              <AnchorPane fx:id="AnchorPaneParametrosDoSistemaProcessador" minHeight="0.0" minWidth="0.0" pickOnBounds="false" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label fx:id="LabelPoliticasDeEscalonamento" layoutX="34.0" layoutY="30.0" text="Políticas de Escalonamento">
                            <font>
                               <Font name="Arial" size="16.0" />
                            </font>
                         </Label>
-                        <RadioButton fx:id="RadioButtonRoundRobimSimples" layoutX="34.0" layoutY="77.0" mnemonicParsing="false" text="Round-robim Simples" />
-                        <RadioButton fx:id="RadioButtonRoundRobimComPrioridades" layoutX="34.0" layoutY="117.0" mnemonicParsing="false" text="Round-robim com Prioridade" />
-                        <RadioButton fx:id="RadioButtonComPrioridades" layoutX="34.0" layoutY="157.0" mnemonicParsing="false" text="Com Prioridade" />
-                        <RadioButton fx:id="RadioButtonComPrioridadesDinamicas" layoutX="34.0" layoutY="197.0" mnemonicParsing="false" text="Com Prioridade Dinâmicas" />
-                        <RadioButton fx:id="RadioButtonEscalonamentoDaLoteria" layoutX="34.0" layoutY="234.0" mnemonicParsing="false" text="Escalonamento da loteria" />
+                        <Group id="GrupoPoliticasDeEscalonamento" fx:id="GroupPoliticasDeEscalonamento" cache="true" layoutX="34.0" layoutY="77.0">
+                           <children>
+                              <RadioButton fx:id="RadioButtonRoundRobimSimples" mnemonicParsing="false" selected="true" text="Round-robim Simples">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="GrupoPoliticasDeEscalonamento" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="RadioButtonRoundRobimComPrioridades" layoutY="40.0" mnemonicParsing="false" text="Round-robim com Prioridade" toggleGroup="$GrupoPoliticasDeEscalonamento" />
+                              <RadioButton fx:id="RadioButtonComPrioridades" layoutY="80.0" mnemonicParsing="false" text="Com Prioridade" toggleGroup="$GrupoPoliticasDeEscalonamento" />
+                              <RadioButton fx:id="RadioButtonComPrioridadesDinamicas" layoutY="120.0" mnemonicParsing="false" text="Com Prioridade Dinâmicas" toggleGroup="$GrupoPoliticasDeEscalonamento" />
+                              <RadioButton fx:id="RadioButtonEscalonamentoDaLoteria" layoutY="157.0" mnemonicParsing="false" text="Escalonamento da loteria" toggleGroup="$GrupoPoliticasDeEscalonamento" />
+                           </children>
+                        </Group>
                      </children>
                   </AnchorPane>
             </content>

@@ -1,20 +1,64 @@
 package modelo;
 
 import javafx.scene.paint.Color;
+import static visao.SimuladorSO.pidAtual;
 
 /**
  *
  * @author IgorCamargo
+ * @author tatianefpg
  */
 public class Processo {
     private Color cor;
     private int pid;
     private int prioridade;
-    private String estado;
-    private int tempoCPU;
+    private String estado;  //ACHO QUE NÃO USA
+    private int tempoCPU;   //ACHO QUE NÃO USA
     private int qtdFrames;
     private String tipoProcesso;
+    //Tempo de execucao
+    public static int quantum;
+    //{EXECUTANDO,PRONTO,BLOQUEADO,AGUARDANDO}
+    private String status;
+    public int id;
 
+    public Processo(){
+        this.pid = pidAtual++;
+        this.estado = "Pronto";
+    }
+    
+    public Processo(Color cor, int prioridade, int qtdFrames, String tipoProcesso) {
+        this.pid = pidAtual++;
+        this.cor = cor;
+        this.prioridade = prioridade;
+        this.qtdFrames = qtdFrames;
+        this.tipoProcesso = tipoProcesso;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
+    public static float getQuantum() {
+        return quantum;
+    }
+
+    public static void setQuantum(int quantum) {
+        Processo.quantum = quantum;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
     public Color getCor() {
         return cor;
     }

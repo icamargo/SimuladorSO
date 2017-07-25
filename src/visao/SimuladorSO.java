@@ -1,16 +1,28 @@
 package visao;
 
+import java.util.ArrayList;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import modelo.CelulaMemoria;
+import modelo.Processo;
 
 /**
  *
  * @author IgorCamargo
  */
 public class SimuladorSO extends Application {
+    
+    public static ArrayList<Processo> listaProcessos = new ArrayList();
+    //public static ObservableList<Processo> listaProcessos = FXCollections.observableArrayList();
+    public static int pidAtual = 0;
+    public static ArrayList<CelulaMemoria> memoria = new ArrayList();
+    public static ArrayList<Node> listaNosMemoria = new ArrayList();
     
     @Override
     public void start(Stage stage) throws Exception {
