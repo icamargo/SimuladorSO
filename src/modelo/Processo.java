@@ -13,12 +13,12 @@ public class Processo {
     private int pid;
     private int prioridade;
     private String estado;  //ACHO QUE NÃO USA
-    private int tempoCPU;   //ACHO QUE NÃO USA
+    //{EXECUTANDO,PRONTO,BLOQUEADO,AGUARDANDO}
+    private int tempoCPU;
     private int qtdFrames;
     private String tipoProcesso;
     //Tempo de execucao
-    public static int quantum;
-    //{EXECUTANDO,PRONTO,BLOQUEADO,AGUARDANDO}
+    private int quantumProcesso;
     private String status;
     public int id;
 
@@ -35,6 +35,14 @@ public class Processo {
         this.tipoProcesso = tipoProcesso;
     }
 
+    public int getQuantumProcesso() {
+        return quantumProcesso;
+    }
+
+    public void setQuantumProcesso(int quantumProcesso) {
+        this.quantumProcesso = quantumProcesso;
+    }
+    
     public int getId() {
         return id;
     }
@@ -43,14 +51,6 @@ public class Processo {
         this.id = id;
     }
     
-    public static float getQuantum() {
-        return quantum;
-    }
-
-    public static void setQuantum(int quantum) {
-        Processo.quantum = quantum;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -113,6 +113,10 @@ public class Processo {
 
     public void setTipoProcesso(String tipoProcesso) {
         this.tipoProcesso = tipoProcesso;
+    }
+
+    public void getQuantumProcesso(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
