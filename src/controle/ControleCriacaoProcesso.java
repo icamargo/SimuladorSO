@@ -15,7 +15,7 @@ import static visao.SimuladorSO.listaProcessos;
  * @author IgorCamargo
  */
 public class ControleCriacaoProcesso implements Initializable {
-    
+
     private ControleMemoria controleMemoria = new ControleMemoria();
     private ControleProcessos controleProcessos = new ControleProcessos();
 
@@ -37,11 +37,11 @@ public class ControleCriacaoProcesso implements Initializable {
         chBoxTipoProcesso.getItems().addAll("CPU-Bound", "I/O-Bound");
         txtFieldNroProcessos.setMask("NNN");
     }
-    
+
     @FXML
     public void criarProcesso(){
         Processo novoProcesso = new Processo();
-        
+
         novoProcesso.setPrioridade((int) chBoxPrioridade.getValue());
         novoProcesso.setQtdFrames((int) chBoxFrames.getValue());
         novoProcesso.setTipoProcesso((String) chBoxTipoProcesso.getValue());

@@ -29,7 +29,7 @@ public class ControleProcessos implements Initializable {
 
     //ArrayList de processos
     List<Processo> processos = new ArrayList<Processo>();
-
+    
     @FXML
     private TableView<Processo> tblProcessos;
     @FXML
@@ -44,7 +44,7 @@ public class ControleProcessos implements Initializable {
     private TableColumn<Processo, Integer> colTempoCPU;
     @FXML
     private TableColumn<Processo, Integer> colFrames;
-
+    
     @FXML
     private void handleButtonAction(ActionEvent event) {
     }

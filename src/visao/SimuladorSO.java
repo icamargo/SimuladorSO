@@ -26,7 +26,7 @@ public class SimuladorSO extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent telaGerenciaProcessos=  FXMLLoader.load(getClass().getResource("GerenciaProcessos.fxml"));
+        Parent telaGerenciaProcessos =  FXMLLoader.load(getClass().getResource("GerenciaProcessos.fxml"));
         Scene sceneGerenciaProcessos = new Scene(telaGerenciaProcessos);
         stage.setScene(sceneGerenciaProcessos);
         stage.setTitle("Gerência de Processos");
@@ -44,6 +44,16 @@ public class SimuladorSO extends Application {
         stageGerenciaMemoria.setY(0);
         stageGerenciaMemoria.setResizable(false);
         stageGerenciaMemoria.show();
+        
+        Stage stageGerenciaProcessador = new Stage();
+        Parent telaGerenciaProcessador = FXMLLoader.load(getClass().getResource("GerenciaProcessador.fxml"));
+        Scene sceneGerenciaProcessador = new Scene(telaGerenciaProcessador);
+        stageGerenciaProcessador.setScene(sceneGerenciaProcessador);
+        stageGerenciaProcessador.setTitle("Gerência de Processador");
+        stageGerenciaProcessador.setX(0);
+        stageGerenciaProcessador.setY(270);
+        stageGerenciaProcessador.setResizable(false);
+        stageGerenciaProcessador.show();
     }
     
     public static void main(String[] args) {

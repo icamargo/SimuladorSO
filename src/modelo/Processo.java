@@ -34,7 +34,7 @@ public class Processo {
         this.qtdFrames = qtdFrames;
         this.tipoProcesso = tipoProcesso;
     }
-
+    
     public int getId() {
         return id;
     }
