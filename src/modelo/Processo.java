@@ -10,7 +10,7 @@ import static visao.SimuladorSO.pidAtual;
  */
 public class Processo {
     private Color cor;
-    private int pid;
+    private int pid;        //Código do processo
     private int prioridade;
     private String estado;  //ACHO QUE NÃO USA
     //{EXECUTANDO,PRONTO,BLOQUEADO,AGUARDANDO}
@@ -20,7 +20,6 @@ public class Processo {
     //Tempo de execucao
     private int quantumProcesso;
     private String status;
-    public int id;
 
     public Processo(){
         this.pid = pidAtual++;
@@ -41,14 +40,6 @@ public class Processo {
 
     public void setQuantumProcesso(int quantumProcesso) {
         this.quantumProcesso = quantumProcesso;
-    }
-    
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
     
     public String getStatus() {
@@ -113,10 +104,6 @@ public class Processo {
 
     public void setTipoProcesso(String tipoProcesso) {
         this.tipoProcesso = tipoProcesso;
-    }
-
-    public void getQuantumProcesso(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
