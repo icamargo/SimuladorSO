@@ -130,7 +130,7 @@ public class ControleParametrosSistema implements Initializable{
         //COPIA CODIGO roundRobimSimples
     }
     
-    private ArrayList listaDePrioridades(){
+    private void listaDePrioridades(){
         int aux = 0;
         //Coloca os processos em ordem de prioridade
         for(int i = 0; i < listaProcessos.size(); i++){
@@ -142,7 +142,6 @@ public class ControleParametrosSistema implements Initializable{
 			}
 		}
 	}
-        return listaProcessos;
     }
     
     private void comPrioridades (){
