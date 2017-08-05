@@ -43,12 +43,12 @@
                         </Label>
                         <Group id="grupoPoliticasEscalonamento" fx:id="grupoPoliticasEscalonamento" cache="true" layoutX="34.0" layoutY="77.0">
                            <children>
-                              <RadioButton fx:id="radioButtonRoundRobimSimples" mnemonicParsing="false" selected="true" text="Round-robim Simples">
+                              <RadioButton fx:id="radioButtonRoundRobinSimples" mnemonicParsing="false" selected="true" text="Round-robim Simples">
                                  <toggleGroup>
                                     <ToggleGroup fx:id="GrupoPoliticasDeEscalonamento" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton fx:id="radioButtonRoundRobimComPrioridades" layoutY="40.0" mnemonicParsing="false" text="Round-robim com Prioridade" toggleGroup="$GrupoPoliticasDeEscalonamento" />
+                              <RadioButton fx:id="radioButtonRoundRobinComPrioridades" layoutY="40.0" mnemonicParsing="false" text="Round-robim com Prioridade" toggleGroup="$GrupoPoliticasDeEscalonamento" />
                               <RadioButton fx:id="radioButtonComPrioridades" layoutY="80.0" mnemonicParsing="false" text="Com Prioridade" toggleGroup="$GrupoPoliticasDeEscalonamento" />
                               <RadioButton fx:id="radioButtonComPrioridadesDinamicas" layoutY="120.0" mnemonicParsing="false" text="Com Prioridade Dinâmicas" toggleGroup="$GrupoPoliticasDeEscalonamento" />
                               <RadioButton fx:id="radioButtonEscalonamentoDaLoteria" layoutY="157.0" mnemonicParsing="false" text="Escalonamento da loteria" toggleGroup="$GrupoPoliticasDeEscalonamento" />

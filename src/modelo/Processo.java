@@ -13,17 +13,16 @@ import static visao.SimuladorSO.pidAtual;
 public class Processo {
     //private Color cor;
     private Rectangle cor = new Rectangle(55, 10);
-    private int pid;
+    private int pid; //Identificador processo
     private int prioridade;
-    private String estado;  //ACHO QUE NÃO USA
-    //{EXECUTANDO,PRONTO,BLOQUEADO,AGUARDANDO}
-    private int tempoCPU;
+    private String estado; //{Executando(está na CPU),Pronto(finalizou I/O e fica em loop),Bloqueado(I/O),Aguardando(aguardando CPU),Suspenso(suspndido pelo usuário)}
+    private int tempoCPU; //tempo executando CPU
     private int qtdFrames;
-    private String tipoProcesso;
-    //Tempo de execucao
-    private int quantumProcesso;
-    private String status;
-
+    private String tipoProcesso; //{CPU-Bound, I/O-Bound}
+    //Igual tempoCPU private int 
+    private int quantumProcesso;//Escalonador (inicializando com zero);
+    private int framesExecutados;  //Escalonador (iniciar com a quantidade de frames)
+    
     public Processo(){
         this.pid = pidAtual++;
         this.estado = "Pronto";
@@ -35,22 +34,6 @@ public class Processo {
         this.prioridade = prioridade;
         this.qtdFrames = qtdFrames;
         this.tipoProcesso = tipoProcesso;
-    }
-
-    public int getQuantumProcesso() {
-        return quantumProcesso;
-    }
-
-    public void setQuantumProcesso(int quantumProcesso) {
-        this.quantumProcesso = quantumProcesso;
-    }
-    
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
     
     public Rectangle getCor() {
@@ -107,6 +90,22 @@ public class Processo {
 
     public void setTipoProcesso(String tipoProcesso) {
         this.tipoProcesso = tipoProcesso;
+    }
+    
+    public int getFramesExecutados() {
+        return framesExecutados;
+    }
+
+    public void setFramesExecutados(int framesExecutados) {
+        this.framesExecutados = framesExecutados;
+    }
+
+    public int getQuantumProcesso() {
+        return quantumProcesso;
+    }
+
+    public void setQuantumProcesso(int quantumProcesso) {
+        this.quantumProcesso = quantumProcesso;
     }
 
 }

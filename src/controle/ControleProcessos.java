@@ -82,10 +82,6 @@ public class ControleProcessos implements Initializable {
     }
     
     public void atualizaDadosTabela(){
-        colEstado.setCellValueFactory(new PropertyValueFactory<>("estado"));
-        colTempoCPU.setCellValueFactory(new PropertyValueFactory<>("tempoCPU"));
-        colFrames.setCellValueFactory(new PropertyValueFactory<>("qtdFrames"));
-        tblProcessos.getItems().setAll(listaProcessos); //jgjhgjhgjhgjhg
-        de merge!!
+        tblProcessos.getItems().setAll(listaProcessos);
     }
 }
