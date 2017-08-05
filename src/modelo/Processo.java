@@ -23,7 +23,6 @@ public class Processo {
     //Tempo de execucao
     private int quantumProcesso;
     private String status;
-    public int id;
 
     public Processo(){
         this.pid = pidAtual++;
@@ -44,14 +43,6 @@ public class Processo {
 
     public void setQuantumProcesso(int quantumProcesso) {
         this.quantumProcesso = quantumProcesso;
-    }
-    
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
     
     public String getStatus() {
