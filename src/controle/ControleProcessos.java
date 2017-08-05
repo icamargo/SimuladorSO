@@ -2,8 +2,6 @@ package controle;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,9 +25,6 @@ import static visao.SimuladorSO.listaProcessos;
  */
 public class ControleProcessos implements Initializable {
 
-    //ArrayList de processos
-    List<Processo> processos = new ArrayList<Processo>();
-    
     @FXML
     private TableView<Processo> tblProcessos;
     @FXML

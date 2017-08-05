@@ -62,10 +62,10 @@ public class ControleParametrosSistema {
                 quantumAtual = 0;
                 processos.get(posicao).setStatus("EXECUTANDO");
                 
-                if(processos.get(posicao).quantum > quantumSistema){
-                    processos.get(posicao).quantum = processos.get(posicao).quantum - quantumSistema;
+                if(processos.get(posicao).getQuantumProcesso() > quantumSistema){
+                    processos.get(posicao).setQuantumProcesso(processos.get(posicao).getQuantumProcesso() - quantumSistema) ;
                     while(quantumAtual <= quantumSistema){
-                        System.out.println(processos.get(posicao).quantum);
+                        System.out.println(processos.get(posicao).getQuantumProcesso());
                         quantumAtual ++;
                     }
                     //processso ficou bloqueado pois acabou seu quantum
@@ -73,11 +73,11 @@ public class ControleParametrosSistema {
                     
                 }
                 else{
-                    while(processos.get(posicao).quantum != quantumAtual){
+                    while(processos.get(posicao).getQuantumProcesso() != quantumAtual){
                         quantumAtual ++;
                     }
                     //processo finalizado
-                    processos.get(posicao).quantum = 0;
+                    processos.get(posicao).setQuantumProcesso(0);
                     processos.get(posicao).setStatus("PRONTO");
                     //Remove processo da lista
                     processos.remove(posicao);

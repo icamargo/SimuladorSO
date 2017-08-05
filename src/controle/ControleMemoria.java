@@ -41,7 +41,6 @@ public class ControleMemoria implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //listaNos = new ArrayList();
         for (int i = 0; i < 100; i++) {
             Label label = new Label();
             label.setText(String.valueOf(i));
@@ -67,38 +66,13 @@ public class ControleMemoria implements Initializable {
         }
     }
 
-    /*@FXML
-    void mostraCirculo() {
-        int indice = 0;
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                HBox hBoxAux = new HBox();
-                hBoxAux = (HBox) listaNosMemoria.get(indice);
-                hBoxAux.getChildren().get(1).setVisible(true);
-                indice++;
-            }
-        }
-    }
-    @FXML
-    void ocultaCirculo() {
-        int indice = 0;
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                HBox hBoxAux = new HBox();
-                hBoxAux = (HBox) listaNosMemoria.get(indice);
-                hBoxAux.getChildren().get(1).setVisible(false);
-                indice++;
-            }
-        }
-    }*/
-
     public void adicionaProcessoMemoria(Processo processo) {
         CelulaMemoria novaCelulaMemoria = new CelulaMemoria(processo);
 
         memoria.add(novaCelulaMemoria);
 
         int indiceMemoria = (memoria.size() - 1);
-        mostraCirculo(indiceMemoria, processo.getCor());
+        mostraCirculo(indiceMemoria, (Color)processo.getCor().getFill());
     }
 
     private void mostraCirculo(int indiceMemoria, Color corProcesso) {

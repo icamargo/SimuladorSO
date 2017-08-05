@@ -14,12 +14,12 @@
             <children>
                 <TableView fx:id="tblProcessos" prefHeight="268.0" prefWidth="467.0">
                     <columns>
-                        <TableColumn fx:id="colCor" prefWidth="63.0" text="Cor" />
-                        <TableColumn fx:id="colPID" prefWidth="68.0" text="PID" />
-                        <TableColumn fx:id="colPrioridade" prefWidth="78.0" text="Prioridade" />
-                        <TableColumn fx:id="colEstado" prefWidth="112.0" text="Estado" />
-                        <TableColumn fx:id="colTempoCPU" prefWidth="74.0" text="Tempo CPU" />
-                        <TableColumn fx:id="colFrames" prefWidth="51.0" text="Frames" />
+                        <TableColumn fx:id="colCor" prefWidth="63.0" text="Cor" style="-fx-alignment: CENTER;" />
+                        <TableColumn fx:id="colPID" prefWidth="68.0" text="PID" style="-fx-alignment: CENTER;" />
+                        <TableColumn fx:id="colPrioridade" prefWidth="78.0" text="Prioridade" style="-fx-alignment: CENTER;" />
+                        <TableColumn fx:id="colEstado" prefWidth="112.0" text="Estado" style="-fx-alignment: CENTER;" />
+                        <TableColumn fx:id="colTempoCPU" prefWidth="74.0" text="Tempo CPU" style="-fx-alignment: CENTER;" />
+                        <TableColumn fx:id="colFrames" prefWidth="51.0" text="Frames" style="-fx-alignment: CENTER;" />
                     </columns>
                 </TableView>
                 <VBox alignment="CENTER" prefHeight="446.0" prefWidth="123.0" spacing="10.0">

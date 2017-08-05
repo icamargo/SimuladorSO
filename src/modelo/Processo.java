@@ -1,6 +1,8 @@
 package modelo;
 
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import static visao.SimuladorSO.pidAtual;
 
 /**
@@ -9,16 +11,17 @@ import static visao.SimuladorSO.pidAtual;
  * @author tatianefpg
  */
 public class Processo {
-    private Color cor;
+    //private Color cor;
+    private Rectangle cor = new Rectangle(55, 10);
     private int pid;
     private int prioridade;
     private String estado;  //ACHO QUE NÃO USA
-    private int tempoCPU;   //ACHO QUE NÃO USA
+    //{EXECUTANDO,PRONTO,BLOQUEADO,AGUARDANDO}
+    private int tempoCPU;
     private int qtdFrames;
     private String tipoProcesso;
     //Tempo de execucao
-    public static int quantum;
-    //{EXECUTANDO,PRONTO,BLOQUEADO,AGUARDANDO}
+    private int quantumProcesso;
     private String status;
     public int id;
 
@@ -29,10 +32,18 @@ public class Processo {
     
     public Processo(Color cor, int prioridade, int qtdFrames, String tipoProcesso) {
         this.pid = pidAtual++;
-        this.cor = cor;
+        this.cor.setFill(cor);
         this.prioridade = prioridade;
         this.qtdFrames = qtdFrames;
         this.tipoProcesso = tipoProcesso;
+    }
+
+    public int getQuantumProcesso() {
+        return quantumProcesso;
+    }
+
+    public void setQuantumProcesso(int quantumProcesso) {
+        this.quantumProcesso = quantumProcesso;
     }
     
     public int getId() {
@@ -43,14 +54,6 @@ public class Processo {
         this.id = id;
     }
     
-    public static float getQuantum() {
-        return quantum;
-    }
-
-    public static void setQuantum(int quantum) {
-        Processo.quantum = quantum;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -59,12 +62,12 @@ public class Processo {
         this.status = status;
     }
     
-    public Color getCor() {
+    public Rectangle getCor() {
         return cor;
     }
 
     public void setCor(Color cor) {
-        this.cor = cor;
+        this.cor.setFill(cor);
     }
 
     public int getPid() {

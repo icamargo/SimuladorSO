@@ -17,7 +17,7 @@ import static visao.SimuladorSO.listaProcessos;
 public class ControleCriacaoProcesso implements Initializable {
 
     private ControleMemoria controleMemoria = new ControleMemoria();
-    private ControleProcessos controleProcessos = new ControleProcessos();
+    private ControleArquivoPaginacao controleArquivoPaginacao = new ControleArquivoPaginacao();
 
     @FXML
     private ChoiceBox chBoxPrioridade;
@@ -27,15 +27,12 @@ public class ControleCriacaoProcesso implements Initializable {
     private ChoiceBox chBoxTipoProcesso;
     @FXML
     private ColorPicker clrPickerCorProcesso;
-    @FXML
-    private MaskTextField txtFieldNroProcessos;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         chBoxPrioridade.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
         chBoxFrames.getItems().addAll(1, 2, 3, 4, 5);
         chBoxTipoProcesso.getItems().addAll("CPU-Bound", "I/O-Bound");
-        txtFieldNroProcessos.setMask("NNN");
     }
 
     @FXML
@@ -49,6 +46,6 @@ public class ControleCriacaoProcesso implements Initializable {
         listaProcessos.add(novoProcesso);
         
         controleMemoria.adicionaProcessoMemoria(novoProcesso);
-        //controleProcessos.atualizaDadosTabela();
+        controleArquivoPaginacao.adicionaProcessoArqPaginacao(novoProcesso);
     }
 }

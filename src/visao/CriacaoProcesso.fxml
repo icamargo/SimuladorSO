@@ -8,9 +8,8 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import util.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="226.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleCriacaoProcesso">
+<AnchorPane id="AnchorPane" prefHeight="177.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleCriacaoProcesso">
     <children>
         <VBox alignment="CENTER" layoutX="2.0" prefHeight="226.0" prefWidth="290.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
             <children>
@@ -41,15 +40,6 @@
                     <children>
                         <Label fx:id="lblCorProcesso" text="Cor do Processo" />
                         <ColorPicker fx:id="clrPickerCorProcesso" prefHeight="25.0" prefWidth="100.0" />
-                    </children>
-                </HBox>
-                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="290.0" spacing="10.0">
-                    <opaqueInsets>
-                        <Insets />
-                    </opaqueInsets>
-                    <children>
-                        <Label fx:id="lblNroProcessos" text="Número de Processos" />
-                        <MaskTextField fx:id="txtFieldNroProcessos" prefHeight="25.0" prefWidth="74.0" />
                     </children>
                 </HBox>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="290.0" spacing="10.0">
