@@ -111,8 +111,8 @@ public class ControleProcessos implements Initializable {
         colTempoCPU.setCellValueFactory(new PropertyValueFactory<>("tempoCPU"));
         colFrames.setCellValueFactory(new PropertyValueFactory<>("qtdFrames"));
     }
-
-    public void atualizaDadosTabela() {
+    
+    public void atualizaDadosTabela(){
         tblProcessos.getItems().setAll(listaProcessos);
     }
 }
