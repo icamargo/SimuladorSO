@@ -26,7 +26,7 @@ public class Processo {
 
     public Processo(){
         this.pid = pidAtual++;
-        this.estado = "Pronto";
+        this.estado = "Aguardando";
     }
     
     public Processo(Color cor, int prioridade, int qtdFrames, String tipoProcesso) {

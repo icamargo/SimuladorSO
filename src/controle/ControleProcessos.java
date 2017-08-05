@@ -39,7 +39,7 @@ public class ControleProcessos implements Initializable {
     private TableColumn<Processo, Integer> colTempoCPU;
     @FXML
     private TableColumn<Processo, Integer> colFrames;
-    
+
     @FXML
     private void handleButtonAction(ActionEvent event) {
     }
@@ -62,6 +62,37 @@ public class ControleProcessos implements Initializable {
         atualizaDadosTabela();
     }
 
+    @FXML
+    public void suspenderProcesso() {
+        Processo processoAux = tblProcessos.getSelectionModel().getSelectedItem();
+        processoAux.setEstado("Suspenso");
+        listaProcessos.get(0);
+    }
+
+    @FXML
+    public void prosseguirProcesso() {
+        Processo processoAux = tblProcessos.getSelectionModel().getSelectedItem();
+        processoAux.setEstado("Aguardando");
+        listaProcessos.get(0);
+    }
+
+    @FXML
+    public void chamaTelaAlteracaoPrioridade() throws IOException {
+        Stage stage = new Stage();
+        Parent telaNovaPrioridade = FXMLLoader.load(getClass().getResource("/visao/NovaPrioridade.fxml"));
+        Scene sceneNovaPrioridade = new Scene(telaNovaPrioridade);
+        stage.setScene(sceneNovaPrioridade);
+        stage.setTitle("Alteração de Prioridade");
+        stage.setResizable(false);
+        stage.show();
+
+        //FXMLLoader fxmlLoader = new FXMLLoader();
+        //fxmlLoader.setLocation(getClass().getResource("/visao/NovaPrioridade.fxml"));
+        //Scene sceneNovaPrioridade = new Scene(fxmlLoader.load());
+        //ControleNovaPrioridade controleNovaPrioridade = fxmlLoader.<ControleNovaPrioridade>getController();
+        //controleNovaPrioridade.setProcesso(tblProcessos.getSelectionModel().getSelectedItem());
+    }
+
     public Node getNode(String node) {
         Node no = null;
         try {
@@ -80,12 +111,8 @@ public class ControleProcessos implements Initializable {
         colTempoCPU.setCellValueFactory(new PropertyValueFactory<>("tempoCPU"));
         colFrames.setCellValueFactory(new PropertyValueFactory<>("qtdFrames"));
     }
-    
-    public void atualizaDadosTabela(){
-        colEstado.setCellValueFactory(new PropertyValueFactory<>("estado"));
-        colTempoCPU.setCellValueFactory(new PropertyValueFactory<>("tempoCPU"));
-        colFrames.setCellValueFactory(new PropertyValueFactory<>("qtdFrames"));
-        tblProcessos.getItems().setAll(listaProcessos); //jgjhgjhgjhgjhg
-        de merge!!
+
+    public void atualizaDadosTabela() {
+        tblProcessos.getItems().setAll(listaProcessos);
     }
 }

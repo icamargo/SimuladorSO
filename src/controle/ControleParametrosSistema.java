@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package controle;
 
 import java.net.URL;
@@ -165,7 +159,7 @@ public class ControleParametrosSistema implements Initializable{
                 if(listaProcessos.get(posicao).getQuantumProcesso() > quantumSistema){
                     quantumAtual = quantumSistema;
                     //VERIFICAR NO CASO DA LISTA Q TIVER 1 ELEMENTO
-                    while((quantumAtual > 0) && (listaProcessos.get(posicao).getPrioridade(posicao) >= listaProcessos.get(posicao).getPrioridade(posicao +1))){
+                    while((quantumAtual > 0) && (listaProcessos.get(posicao).getPrioridade() >= listaProcessos.get(posicao+1).getPrioridade())){
                         //Decrementa 1 quantum do QuantumProcesso
                         listaProcessos.get(posicao).setQuantumProcesso(listaProcessos.get(posicao).getQuantumProcesso()-1);
                         listaProcessos.get(posicao).setPrioridade(listaProcessos.get(posicao).getPrioridade() -1);
@@ -177,7 +171,7 @@ public class ControleParametrosSistema implements Initializable{
                     listaDePrioridades();
                 }
                 else{
-                    while((listaProcessos.get(posicao).getQuantumProcesso() > 0) && (listaProcessos.get(posicao).getPrioridade(posicao) >= listaProcessos.get(posicao).getPrioridade(posicao +1))){
+                    while((listaProcessos.get(posicao).getQuantumProcesso() > 0) && (listaProcessos.get(posicao).getPrioridade() >= listaProcessos.get(posicao+1).getPrioridade())){
                         listaProcessos.get(posicao).setTempoCPU(listaProcessos.get(posicao).getTempoCPU() +1);
                         listaProcessos.get(posicao).setPrioridade(listaProcessos.get(posicao).getPrioridade() -1);
                     }

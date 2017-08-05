@@ -12,7 +12,7 @@
 * @author tatianefpg
 -->
 
-<AnchorPane id="AnchorPane" fx:id="AchorPaneGerenciaDoProcessador" prefHeight="425.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" fx:id="AchorPaneGerenciaDoProcessador" prefHeight="425.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleGerenciaProcessador">
    <children>
       <Label fx:id="LabelParametrosDopSistema" alignment="CENTER" disable="true" layoutY="2.0" prefHeight="45.0" prefWidth="601.0" text="Gerência do Processador" textAlignment="CENTER">
          <font>

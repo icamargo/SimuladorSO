@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import util.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="90.0" prefWidth="170.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleNovaPrioridade">
+   <children>
+      <VBox alignment="CENTER" prefHeight="90.0" prefWidth="170.0" spacing="10.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="138.0" text="Digite a Nova Prioridade:" />
+            <MaskTextField fx:id="txtFieldNovaPrioridade" prefHeight="25.0" prefWidth="190.0">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+            </MaskTextField>
+            <Button mnemonicParsing="false" text="Alterar" />
+         </children>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" />
+   </padding>
+</AnchorPane>
