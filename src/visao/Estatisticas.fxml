@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="AnchorPaneEstatisticas" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleEstatisticas">
     <children>
-        <Label fx:id="abelHorarioDeInicio" layoutX="14.0" layoutY="68.0" prefWidth="136.0" text="Horário de início" />
+        <Label fx:id="LabelHorarioDeInicio" layoutX="14.0" layoutY="68.0" prefWidth="136.0" text="Horário de início" />
         <Label fx:id="LabelNumeroDeProcessos" layoutX="14.0" layoutY="108.0" prefHeight="23.0" prefWidth="198.0" text="Número de Processos" />
         <Label fx:id="LabelTempoTotalUCP" layoutX="14.0" layoutY="187.0" prefHeight="23.0" prefWidth="173.0" text="Tempo Total UCP (s)" />
         <Label fx:id="LabelEstadoProntoEspera" layoutX="14.0" layoutY="223.0" prefHeight="23.0" prefWidth="210.0" text="Estado Pronto Espera" />

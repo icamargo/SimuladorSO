@@ -37,8 +37,6 @@ public class ControleParametrosSistema implements Initializable {
 
     private ArrayList<Processo> listaEscalonador = new ArrayList();
     private ArrayList<Processo> listaEsperaIO = new ArrayList();
-    int quantumSistema = 3;
-    int quantumAtual;
     int posicao = 0;
     private int quantidadeProcessos;
 
