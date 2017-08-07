@@ -19,8 +19,8 @@ import modelo.Processo;
  */
 public class SimuladorSO extends Application {
     
-    //public static ArrayList<Processo> listaProcessos = new ArrayList();
-    public static ObservableList<Processo> listaProcessos = FXCollections.observableArrayList();
+    public static ArrayList<Processo> listaProcessos = new ArrayList();
+   //public static ObservableList<Processo> listaProcessos = FXCollections.observableArrayList();
     public static int pidAtual = 0;
     public static ArrayList<CelulaMemoria> memoria = new ArrayList();
     public static ArrayList<Node> listaNosMemoria = new ArrayList();
@@ -67,6 +67,16 @@ public class SimuladorSO extends Application {
         stageArquivoPaginacao.setY(0);
         stageArquivoPaginacao.setResizable(false);
         stageArquivoPaginacao.show();
+        
+        Stage stageParametrosSistema = new Stage();
+        Parent telaParametrosSistema = FXMLLoader.load(getClass().getResource("ParametrosSistema.fxml"));
+        Scene sceneParametrosSistema = new Scene(telaParametrosSistema);
+        stageParametrosSistema.setScene(sceneParametrosSistema);
+        stageParametrosSistema.setTitle("Parametros do Sistema");
+        stageParametrosSistema.setX(620);
+        stageParametrosSistema.setY(360);
+        stageParametrosSistema.setResizable(false);
+        stageParametrosSistema.show();
     }
     
     public static void main(String[] args) {

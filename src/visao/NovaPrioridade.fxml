@@ -18,7 +18,7 @@
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
             </MaskTextField>
-            <Button mnemonicParsing="false" text="Alterar" />
+            <Button mnemonicParsing="false" text="Alterar" onAction="#alterarPrioridadeProcesso"/>
          </children>
       </VBox>
    </children>

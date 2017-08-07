@@ -1,83 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.MenuButton?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <!--
- *
- * @author tatianefpg
- -->
+*
+* @author tatianefpg
+-->
 
-<AnchorPane id="AnchorPane" fx:controller="controle.ControleParametrosSistema" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" >
-   <children>
-      <Label fx:id="LabelParametrosDopSistema" alignment="CENTER" disable="true" layoutY="2.0" prefHeight="45.0" prefWidth="601.0" text="Parâmetros do Sistema" textAlignment="CENTER">
-         <font>
-            <Font name="Arial Black" size="20.0" />
-         </font>
-      </Label>
-      <TabPane fx:id="TabPlaneParametrosDoSistema" layoutY="51.0" prefHeight="350.0" prefWidth="601.0" tabClosingPolicy="UNAVAILABLE">
-        <tabs>
-          <Tab fx:id="TabGeral" text="Geral">
-            <content>
-              <AnchorPane fx:id="AnchorPaneParametrosDoSistemaGeral" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </Tab>
-          <Tab fx:id="TabProcessador" text="Processador">
-            <content>
-              <AnchorPane fx:id="AnchorPaneParametrosDoSistemaProcessador" minHeight="0.0" minWidth="0.0" pickOnBounds="false" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <Label fx:id="LabelPoliticasDeEscalonamento" layoutX="34.0" layoutY="30.0" text="Políticas de Escalonamento">
-                           <font>
-                              <Font name="Arial" size="16.0" />
-                           </font>
-                        </Label>
-                        <Group id="grupoPoliticasEscalonamento" fx:id="grupoPoliticasEscalonamento" cache="true" layoutX="34.0" layoutY="77.0">
-                           <children>
-                              <RadioButton fx:id="radioButtonRoundRobinSimples" mnemonicParsing="false" selected="true" text="Round-robim Simples">
-                                 <toggleGroup>
-                                    <ToggleGroup fx:id="GrupoPoliticasDeEscalonamento" />
-                                 </toggleGroup>
-                              </RadioButton>
-                              <RadioButton fx:id="radioButtonRoundRobinComPrioridades" layoutY="40.0" mnemonicParsing="false" text="Round-robim com Prioridade" toggleGroup="$GrupoPoliticasDeEscalonamento" />
-                              <RadioButton fx:id="radioButtonComPrioridades" layoutY="80.0" mnemonicParsing="false" text="Com Prioridade" toggleGroup="$GrupoPoliticasDeEscalonamento" />
-                              <RadioButton fx:id="radioButtonComPrioridadesDinamicas" layoutY="120.0" mnemonicParsing="false" text="Com Prioridade Dinâmicas" toggleGroup="$GrupoPoliticasDeEscalonamento" />
-                              <RadioButton fx:id="radioButtonEscalonamentoDaLoteria" layoutY="157.0" mnemonicParsing="false" text="Escalonamento da loteria" toggleGroup="$GrupoPoliticasDeEscalonamento" />
-                           </children>
-                        </Group>
-                     </children>
-                  </AnchorPane>
-            </content>
-          </Tab>
-            <Tab fx:id="TabMemoria" text="Memória">
-              <content>
-                <AnchorPane fx:id="AnchorPaneParametrosDoSistemaMemoria" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                     <children>
-                        <MenuButton fx:id="MenuButtonPoliticaDeBuscaDePaginas" layoutX="368.0" layoutY="27.0" mnemonicParsing="false" text="Antecipada">
-                          <items>
-                            <MenuItem mnemonicParsing="false" text="Action 1" />
-                            <MenuItem mnemonicParsing="false" text="Action 2" />
-                          </items>
-                        </MenuButton>
-                        <Label fx:id="LabelPoliticaDeBuscaDePaginas" layoutX="27.0" layoutY="32.0" text="Política de busca de páginas" />
-                        <Label fx:id="LabelImplementarLimiteDeFramesPorProcesso" layoutX="27.0" layoutY="91.0" text="Implementar limite de frames por processo" />
-                        <Label fx:id="LabelNumMinimoDePaginasLivresNaMemoria" layoutX="27.0" layoutY="145.0" text="Núm. mínimo de páginas livres na memória (%)" />
-                        <CheckBox fx:id="CheckBoxImplementarLimiteDeFramesPorProcesso" layoutX="368.0" layoutY="91.0" mnemonicParsing="false" />
-                        <TextField fx:id="TextFieldNumMinimoDePaginasLivresNaMemoria" alignment="CENTER" editable="false" layoutX="368.0" layoutY="140.0" prefHeight="31.0" prefWidth="37.0" text="80" />
-                     </children>
-                  </AnchorPane>
-              </content>
-            </Tab>
-        </tabs>
-      </TabPane>
-   </children>
+<AnchorPane id="AnchorPane" prefHeight="303.0" prefWidth="326.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControleParametrosSistema">
+    <children>
+        <Label fx:id="LabelParametrosDopSistema" alignment="CENTER" disable="true" layoutY="2.0" prefHeight="45.0" prefWidth="482.0" text="Parâmetros do Sistema" textAlignment="CENTER">
+            <font>
+                <Font name="Arial Black" size="20.0" />
+            </font>
+        </Label>
+        <TabPane fx:id="TabPlaneParametrosDoSistema" layoutY="51.0" prefHeight="252.0" prefWidth="482.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="TabGeral" text="Geral">
+                    <content>
+                        <AnchorPane fx:id="AnchorPaneParametrosDoSistemaGeral" minHeight="0.0" minWidth="0.0" prefHeight="223.0" prefWidth="305.0" />
+                    </content>
+                </Tab>
+                <Tab fx:id="TabProcessador" text="Processador">
+                    <content>
+                        <AnchorPane fx:id="AnchorPaneParametrosDoSistemaProcessador" minHeight="0.0" minWidth="0.0" pickOnBounds="false" prefHeight="223.0" prefWidth="384.0">
+                            <children>
+                                <Label fx:id="LabelPoliticasDeEscalonamento" layoutX="34.0" layoutY="30.0" text="Políticas de Escalonamento">
+                                    <font>
+                                        <Font name="Arial" size="16.0" />
+                                    </font>
+                                </Label>
+                                <Group id="grupoPoliticasEscalonamento" fx:id="grupoPoliticasEscalonamento" cache="true" layoutX="34.0" layoutY="77.0">
+                                    <children>
+                                        <VBox alignment="CENTER_LEFT" layoutY="-20.0" prefHeight="159.0" prefWidth="200.0" spacing="15.0">
+                                            <children>
+                                                <RadioButton fx:id="rdBtnRoundRobinSimples" mnemonicParsing="false" selected="true" text="Round-robin Simples" />
+                                                <RadioButton fx:id="rdBtnRoundRobinComPrioridades" mnemonicParsing="false" text="Round-robin com Prioridade" />
+                                                <RadioButton fx:id="rdBtnComPrioridades" mnemonicParsing="false" text="Com Prioridade" />
+                                                <RadioButton fx:id="rdBtnComPrioridadesDinamicas" mnemonicParsing="false" text="Com Prioridade Dinâmicas" />
+                                                <RadioButton fx:id="rdBtnEscalonamentoDaLoteria" mnemonicParsing="false" text="Escalonamento da loteria" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </Group>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="TabMemoria" text="Memória">
+                    <content>
+                        <AnchorPane fx:id="AnchorPaneParametrosDoSistemaMemoria" minHeight="0.0" minWidth="0.0" prefHeight="223.0" prefWidth="415.0">
+                            <children>
+                                <HBox prefHeight="100.0" prefWidth="371.0">
+                                    <children>
+                                        <GridPane prefHeight="100.0" prefWidth="354.0">
+                                            <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="257.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="155.0" minWidth="10.0" prefWidth="97.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                            <children>
+                                                <Label fx:id="LabelPoliticaDeBuscaDePaginas" text="Política de busca de páginas" />
+                                                <Label fx:id="LabelImplementarLimiteDeFramesPorProcesso" text="Implementar limite de frames por processo" GridPane.rowIndex="1" />
+                                                <CheckBox fx:id="CheckBoxImplementarLimiteDeFramesPorProcesso" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Label fx:id="LabelNumMinimoDePaginasLivresNaMemoria" text="Núm. mínimo de páginas livres na memória (%)" GridPane.rowIndex="2" />
+                                                <TextField fx:id="TextFieldNumMinimoDePaginasLivresNaMemoria" alignment="CENTER" editable="false" prefHeight="25.0" prefWidth="76.0" text="80" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                </TextField>
+                                                <ChoiceBox fx:id="chBoxPoliticaPaginas" prefWidth="150.0" GridPane.columnIndex="1" />
+                                            </children>
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </GridPane>
+                                    </children>
+                                    <padding>
+                                        <Insets left="15.0" />
+                                    </padding>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
 </AnchorPane>

@@ -74,6 +74,24 @@ public class ControleMemoria implements Initializable {
         int indiceMemoria = (memoria.size() - 1);
         mostraCirculo(indiceMemoria, (Color)processo.getCor().getFill());
     }
+    
+    public void removeProcessoMemoria(Processo processo){
+        HBox hBoxAux = new HBox();
+        Circle circuloAux = new Circle(10);
+        
+        for(int i = 0; i<memoria.size(); i++){
+            if(memoria.get(i).getProcesso().equals(processo)){
+                memoria.remove(processo);
+            }
+        }
+        for(int j = 0; j<listaNosMemoria.size(); j++){
+            hBoxAux = (HBox) listaNosMemoria.get(j);
+            circuloAux = (Circle) hBoxAux.getChildren().get(1);
+            if(circuloAux.getFill().equals(processo.getCor().getFill())){
+                circuloAux.setVisible(false);
+            }
+        }
+    }
 
     private void mostraCirculo(int indiceMemoria, Color corProcesso) {
         HBox hBoxAux = new HBox();

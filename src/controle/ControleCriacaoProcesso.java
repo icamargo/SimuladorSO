@@ -30,7 +30,7 @@ public class ControleCriacaoProcesso implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        chBoxPrioridade.getItems().addAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
+        chBoxPrioridade.getItems().addAll(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15);
         chBoxFrames.getItems().addAll(1, 2, 3, 4, 5);
         chBoxTipoProcesso.getItems().addAll("CPU-Bound", "I/O-Bound");
     }

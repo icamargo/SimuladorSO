@@ -27,9 +27,9 @@
                         <Button fx:id="btnCriar" onAction="#chamaTelaCriacaoProcesso" prefHeight="25.0" prefWidth="135.0" text="Criar" />
                         <Button fx:id="btnSuspender" onAction="#suspenderProcesso" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Suspender" />
                         <Button fx:id="btnProsseguir" onAction="#prosseguirProcesso" mnemonicParsing="false" prefHeight="25.0" prefWidth="144.0" text="Prosseguir" />
-                        <Button fx:id="btnFinalizar" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Finalizar" />
+                        <Button fx:id="btnFinalizar" onAction="#finalizarProcesso" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Finalizar" />
                         <Button fx:id="btnPrioridade" onAction="#chamaTelaAlteracaoPrioridade" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" text="Prioridade" />
-                        <Button fx:id="btnPCB" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="PCB" />
+                        <Button fx:id="btnAtualizar" onAction="#atualizaDadosTabela" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="Atualizar" />
                     </children>
                     <HBox.margin>
                         <Insets />
